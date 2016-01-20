@@ -29,5 +29,8 @@
       "react",
       "stage-0"
     ]
+  },
+  "devDependencies": {
+    "react-router": "^1.0.3"
   }
 }

@@ -14,7 +14,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/dev-server',
-    './app/App.js'
+    './app/main'
   ],
   output: {
     path: 'dist',
@@ -23,7 +23,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)?$/,
         loader: 'react-hot!babel',
         include: __dirname + '/app'
       },
@@ -33,5 +33,8 @@ module.exports = {
   devServer: {
     contentBase: __dirname + '/dist',
     hot: true,
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
   }
 };
