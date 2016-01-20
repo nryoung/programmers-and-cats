@@ -1,13 +1,13 @@
 {
-  "name": "sample",
+  "name": "programmers-and-cats",
   "version": "0.1.0",
-  "description": "boilerplate app",
+  "description": "programmers and cats",
   "main": "webpack.config.js",
   "scripts": {
     "prestart": "webpack",
     "start": "webpack-dev-server"
   },
-  "author": "Ean Platter <eanplatter@gmail.com> (eanplatter.github.io)",
+  "author": "Nic Young <nryoung@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "react": "^0.14.0",
