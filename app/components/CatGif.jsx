@@ -19,9 +19,9 @@ class CatGif extends React.Component {
       .get(this.state.giphyURL)
       .query({tag: this.state.tag, api_key: this.state.apiKey})
       .set('Content-Type', 'application/json')
-      .end(function(err, response) {
+      .end((err, response) => {
             var gifURL = response.body.data.image_url || undefined;
-            if (response.body.meta.status == 200 && gifURL) {
+            if (response.body.meta.status === 200 && gifURL) {
               this.setState({
                 gif: gifURL
               });
