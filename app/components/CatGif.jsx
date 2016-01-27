@@ -3,21 +3,22 @@ import request from 'superagent';
 
 class CatGif extends React.Component {
 
-  constructor() {
-    super();
-    this.state = {
-      gif: undefined,
+  static defaultProps = {
       giphyURL: 'http://api.giphy.com/v1/gifs/random',
       apiKey: 'dc6zaTOxFJmzC',
       tag: 'cat'
-    }
+  };
+
+  constructor() {
+    super();
+    this.state = {gif: undefined}
   }
 
   componentDidMount()
   {
     request
-      .get(this.state.giphyURL)
-      .query({tag: this.state.tag, api_key: this.state.apiKey})
+      .get(this.props.giphyURL)
+      .query({tag: this.props.tag, api_key: this.props.apiKey})
       .set('Content-Type', 'application/json')
       .end((err, response) => {
             var gifURL = response.body.data.image_url || undefined;
