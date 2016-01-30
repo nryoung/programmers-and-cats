@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header'
 import CatGif from './CatGif'
+import LangForm from './LangForm'
 
 
 /*
@@ -13,6 +14,7 @@ class App extends React.Component {
       <div className="programmers-and-cats">
         <Header />
         <CatGif />
+        <LangForm />
       </div>
     )
   }
