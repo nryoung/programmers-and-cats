@@ -4,17 +4,17 @@ import CatGif from './CatGif'
 import LangForm from './LangForm'
 
 
-/*
- * App
- */
 class App extends React.Component {
+  static defaultProps = {
+  catTerms: ['kitten', 'meow', 'feline', 'kitty', 'pussycat', 'tomcat']
+  };
 
   render() {
     return (
       <div className="programmers-and-cats">
         <Header />
         <CatGif />
-        <LangForm />
+        <LangForm catTerms={this.props.catTerms}/>
       </div>
     )
   }

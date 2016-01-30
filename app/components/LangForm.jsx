@@ -1,8 +1,6 @@
 import React from 'react';
 import request from 'superagent';
 
-// hard coding cat terms just for the time being
-var cat_terms = ['kitten', 'meow', 'feline', 'kitty'];
 
 class LangForm extends React.Component {
 
@@ -14,7 +12,7 @@ class LangForm extends React.Component {
     event.preventDefault();
     request
       .get(this.props.apiURL)
-      .query('q='+cat_terms.join('+OR+') + '+language:' + this.refs.lang.value)
+      .query('q='+this.props.catTerms.join('+OR+') + '+language:' + this.refs.lang.value)
       .query({
         sort: 'stars',
         order: 'desc'})
