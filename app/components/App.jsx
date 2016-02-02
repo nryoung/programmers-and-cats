@@ -6,7 +6,7 @@ import LangForm from './LangForm'
 
 class App extends React.Component {
   static defaultProps = {
-  catTerms: ['kitten', 'meow', 'feline', 'kitty', 'pussycat', 'tomcat']
+  catTerms: ['kitten', 'meow', 'feline', 'kitty', 'pussycat']
   };
 
   render() {
