@@ -20,7 +20,7 @@ class LangForm extends React.Component {
       .end((err, response) => {
         if(response.status === 200){
           console.log(response);
-          console.log('total_count: ' + response.body.total_count);
+          this.props.addResults(response, this.refs.lang.value);
         }
       });
   };
