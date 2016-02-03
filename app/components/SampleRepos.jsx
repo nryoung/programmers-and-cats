@@ -6,8 +6,8 @@ class SampleRepos extends React.Component {
       <div className="sample-repos">
         {this.props.repos.map(function(repo, i){
           return (
-            <div>
-              <span key={i}><a href={repo.html_url}>{repo.full_name}</a> {repo.stargazers_count} Stargazers</span>
+            <div key={i}>
+              <span><a href={repo.html_url}>{repo.full_name}</a> {repo.stargazers_count} Stargazers</span>
               <br />
             </div>
           )
