@@ -1,8 +1,9 @@
 import React from 'react';
-import Header from './Header'
-import CatGif from './CatGif'
-import LangForm from './LangForm'
-import Results from './Results'
+import Header from './Header';
+import CatGif from './CatGif';
+import LangForm from './LangForm';
+import Results from './Results';
+import SampleRepos from './SampleRepos';
 
 
 class App extends React.Component {
@@ -30,10 +31,12 @@ class App extends React.Component {
   };
 
   render() {
-    if(this.state.totalCount && this.state.lang){
-      var results = <Results totalCount={this.state.totalCount} lang={this.state.lang}/>;
-    } else {
-      results = null;
+      var results = null;
+      var sampleRepos = null;
+
+    if(this.state.totalCount && this.state.lang && this.state.sampleRepos){
+      results = <Results totalCount={this.state.totalCount} lang={this.state.lang}/>;
+      sampleRepos = <SampleRepos repos={this.state.sampleRepos} />;
     }
 
     return (
@@ -42,6 +45,7 @@ class App extends React.Component {
         <CatGif />
         <LangForm catTerms={this.props.catTerms} addResults={this.addResults}/>
         {results}
+        {sampleRepos}
       </div>
     )
   }
