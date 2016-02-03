@@ -22,7 +22,6 @@ class App extends React.Component {
   }
 
   addResults = (response, lang) => {
-    console.log('addResults called!');
     this.setState({
       totalCount: response.body.total_count,
       sampleRepos: response.body.items.slice(0, 5),

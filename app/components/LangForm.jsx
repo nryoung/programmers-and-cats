@@ -19,7 +19,6 @@ class LangForm extends React.Component {
       .set('Content-Type', 'application/json')
       .end((err, response) => {
         if(response.status === 200){
-          console.log(response);
           this.props.addResults(response, this.refs.lang.value);
         }
       });
