@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Router, Route } from 'react-router';
-import style from '../css/style.css';
+import style from '../css/style.scss';
 
 /*
  * Import Components
