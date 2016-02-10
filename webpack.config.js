@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/app/index.html',
@@ -28,9 +29,13 @@ module.exports = {
         loader: 'react-hot!babel',
         include: __dirname + '/app'
       },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+      },
     ]
   },
-  plugins: [HTMLWebpackPluginConfig, HotReloader],
+  plugins: [HTMLWebpackPluginConfig, HotReloader, new ExtractTextPlugin('[name].css')],
   devServer: {
     contentBase: __dirname + '/dist',
     hot: true,
