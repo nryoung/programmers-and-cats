@@ -32,6 +32,7 @@
     "bulma": "0.0.10",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
     "node-sass": "^3.4.2",
     "react-router": "^1.0.3",
     "react-transform": "0.0.3",

@@ -32,9 +32,13 @@ module.exports = {
         test: /\.scss$/,
         loader: 'style!css!sass'
       },
+      {
+        test: /\.jpe?g$|\.gif$|\.png$|\.svg$/,
+        loader: 'file?name=[path][name].[ext]',
+      }
     ]
   },
-  plugins: [HTMLWebpackPluginConfig, HotReloader, new ExtractTextPlugin('[name].css')],
+  plugins: [HTMLWebpackPluginConfig, HotReloader],
   devServer: {
     contentBase: __dirname + '/dist',
     hot: true,

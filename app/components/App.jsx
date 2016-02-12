@@ -39,13 +39,17 @@ class App extends React.Component {
     }
 
     return (
-      <div className="programmers-and-cats">
-        <Header />
-        <CatGif />
-        <LangForm catTerms={this.props.catTerms} addResults={this.addResults}/>
-        {results}
-        {sampleRepos}
-      </div>
+      <section className="programmers-and-cats hero is-success is-fullheight">
+        <div class="hero-content">
+          <div class="container">
+            <Header />
+            <CatGif />
+            <LangForm catTerms={this.props.catTerms} addResults={this.addResults}/>
+            {results}
+            {sampleRepos}
+          </div>
+        </div>
+      </section>
     )
   }
 }
