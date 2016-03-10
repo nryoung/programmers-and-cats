@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import CatGif from './CatGif';
+import Intro from './Intro';
 import LangForm from './LangForm';
 import Results from './Results';
 import SampleRepos from './SampleRepos';
@@ -44,6 +45,7 @@ class App extends React.Component {
           <div class="container">
             <Header />
             <CatGif />
+            <Intro />
             <LangForm catTerms={this.props.catTerms} addResults={this.addResults}/>
             {results}
             {sampleRepos}
